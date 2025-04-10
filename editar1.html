@@ -53,16 +53,21 @@
         }
         .button-group {
             text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
         }
         .button-group input {
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
-            background-color: #b74c4c; /* Vermelho queimado */
             color: #fff;
             cursor: pointer;
         }
-        .button-group input:hover {
+        .button-group input[type="submit"] {
+            background-color: #b74c4c; /* Vermelho queimado */
+        }
+        .button-group input[type="submit"]:hover {
             background-color: #a63a3a; /* Vermelho queimado mais escuro no hover */
         }
         .button-group input[type="button"] {
@@ -76,7 +81,7 @@
 <body>
     <div class="container">
         <h1>Editar Ação</h1>
-        <form action="../verAcoes.php" method="post">
+        <form action="verAcoes.php" method="post">
             <div class="form-group">
                 <label for="titulo">Título</label>
                 <input type="text" id="titulo" name="titulo" value="Prova" required>
